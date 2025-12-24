@@ -1,0 +1,73 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+  background: #f5f7fb;
+  color: #222;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Navigation */
+.nav a {
+  margin-inline-end: 16px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: #2563eb;
+}
+
+/* Language buttons */
+.lang-buttons button {
+  margin-inline-start: 8px;
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.lang-buttons button:hover {
+  background: #2563eb;
+  color: white;
+}
+
+/* Page content */
+.page {
+  padding: 40px;
+  text-align: center;
+}
+
+/* RTL support */
+html[dir="rtl"] {
+  text-align: right;
+}
+
+html[dir="rtl"] .nav a {
+  margin-inline-end: 0;
+  margin-inline-start: 16px;
+}
+/* Root layout */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8fafc;
+}

@@ -1,0 +1,150 @@
+/* =====================
+   GLOBAL RESET
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont;
+  background: #f4f6fb;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+/* =====================
+   APP LAYOUT
+===================== */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =====================
+   HEADER
+===================== */
+.header {
+  background: white;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* =====================
+   NAVIGATION
+===================== */
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #374151;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.nav a:hover {
+  color: #2563eb;
+  border-color: #2563eb;
+}
+
+/* =====================
+   LANGUAGE BUTTONS
+===================== */
+.lang-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.lang-buttons button {
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.lang-buttons button:hover {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+/* =====================
+   PAGE CONTENT
+===================== */
+.page {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.page-card {
+  background: white;
+  padding: 48px;
+  border-radius: 16px;
+  max-width: 720px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.page-card h1 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.page-card p {
+  font-size: 18px;
+  color: #4b5563;
+}
+
+/* =====================
+   RTL SUPPORT
+===================== */
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+html[dir="rtl"] .nav {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .lang-buttons {
+  flex-direction: row-reverse;
+}
+
+/* =====================
+   MOBILE RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .page-card {
+    padding: 32px 20px;
+  }
+
+  .page-card h1 {
+    font-size: 26px;
+  }
+}
